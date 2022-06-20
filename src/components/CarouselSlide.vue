@@ -1,5 +1,5 @@
 <template>
-  <transition name="left">
+  <transition :name="direction" mode="in-out">
     <div v-show="visibleSlide === index" class="carousel-slide">
       <slot></slot>
     </div>
@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  props: ['visibleSlide', 'index'],
+  props: ['visibleSlide', 'index', 'direction'],
   data() {
     return {};
   },
